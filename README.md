@@ -1,20 +1,22 @@
 添加RocketMQ延时队列,支持任意延时,RocketMQ版本4.7.1
 ****
 一.安装  
-(1)下载本项目源码：git clone https://github.com/zhangrui1102/rocketmq-delay.git
-(2)编译：
-cd rocketmq-delay/
-mvn -Prelease-all -DskipTests clean install -U
-cd distribution/target/rocketmq-4.7.1/rocketmq-4.7.1
-(3)启动：
-nohup sh bin/mqnamesrv &
-nohup sh bin/mqbroker -n localhost:9876 autoCreateTopicEnable=true &
-(4)项目依赖：
-        <dependency>
-            <groupId>org.apache.rocketmq</groupId>
-            <artifactId>rocketmq-client-ext</artifactId>
-            <version>4.7.1</version>
-        </dependency>
+(1)下载本项目源码：git clone https://github.com/zhangrui1102/rocketmq-delay.git  
+(2)编译：  
+cd rocketmq-delay/  
+mvn -Prelease-all -DskipTests clean install -U  
+cd distribution/target/rocketmq-4.7.1/rocketmq-4.7.1  
+(3)启动：  
+nohup sh bin/mqnamesrv &  
+nohup sh bin/mqbroker -n localhost:9876 autoCreateTopicEnable=true &  
+(4)项目依赖：   
+```xml
+<dependency>  
+    <groupId>org.apache.rocketmq</groupId>
+    <artifactId>rocketmq-client-ext</artifactId>
+    <version>4.7.1</version>
+</dependency>
+```
 
 
 二.配置  
